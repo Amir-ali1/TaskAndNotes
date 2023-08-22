@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                 binding.total.text = " $count Notes"
             })
             
-            
+        
             val button: Button = findViewById(R.id.popup)
             button.setOnClickListener {
                 val popupMenu = PopupMenu(this, it)

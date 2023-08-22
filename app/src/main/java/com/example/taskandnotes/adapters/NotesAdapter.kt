@@ -76,18 +76,7 @@ class NotesAdapter(private var notesList: List<Note>) : RecyclerView.Adapter<Not
             }
         }
         
-        
-
-//        holder.itemView.setOnClickListener {
-//            if (!inSelectionMode) {
-//                val context = holder.itemView.context
-//                val intent = Intent(context, AddNotes::class.java)
-//                intent.putExtra("noteId", currentNote.id)
-//                context.startActivity(intent)
-//            } else {
-//                holder.checkbox.isChecked = !holder.checkbox.isChecked
-//            }
-//        }
+ 
     
         holder.itemView.setOnLongClickListener {
             if (!inSelectionMode) {

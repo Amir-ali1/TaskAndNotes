@@ -54,11 +54,7 @@ class AddNotes : AppCompatActivity() {
     private val REQUEST_CAMERA_PERMISSION_CODE = 1002
     private val CAPTURE_IMAGE_REQUEST = 2
     val YOUR_CANVAS_ACTIVITY_REQUEST_CODE= 1003
-//    companion object {
-//        const val EXTRA_NOTE_ID = "EXTRA_NOTE_ID"
-//    }
-    
-    
+
     private var photoURI: Uri? = null
     
     override fun onCreate(savedInstanceState: Bundle?) {
