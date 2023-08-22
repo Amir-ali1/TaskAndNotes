@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TaskAndNotes</string>
+    <string name="show_popup_menu">Show Popup Menu</string>
+    <string name="done">Done</string>
+    <string name="title_save">Save\n</string>
+    <string name="title_draw">Draw\n</string>
+    <string name="canvas_image_desc">Canvas\n</string>
+    <string name="title">Welcome to Notes</string>
+    <string name="title1">Add Almost Anything</string>
+    <string name="title1_body">Capture Photos , Documents and more for \n a richer Notes Experience</string>
+    <string name="title2">Note to Self or with Anyone</string>
+    <string name="title2_body">"Invite Others to view or make  changes to a \n note "</string>
+    <string name="title3">Create Quick Notes Anywhere</string>
+    <string name="title3_Body">"Create new Quick Notes in the app "</string>
+    <string name="notes">Note</string>
+    <string name="notes1">Notes</string>
+</resources>

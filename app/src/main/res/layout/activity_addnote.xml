@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/back"
+        app:layout_constraintEnd_toStartOf="@id/notee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notee"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:text="@string/notes"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toBottomOf="@id/back"
+        app:layout_constraintStart_toEndOf="@id/back"
+        app:layout_constraintTop_toTopOf="@id/back"
+
+        />
+
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/done"
+        android:textSize="15sp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back" />
+
+    <Button
+        android:id="@+id/popup_menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/mmmmm"
+        android:text="@string/show_popup_menu"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@id/done"
+        app:layout_constraintTop_toTopOf="@id/back"
+        app:layout_constraintBottom_toBottomOf="@id/back"
+
+        />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/notee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/editTextContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:id="@+id/title_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/nunito_light"
+                android:hint="Title"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#535050"
+                android:textIsSelectable="true"
+                android:textSize="35sp" />
+
+
+            <EditText
+                android:id="@+id/bulletPointsEdittext"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="• "
+                android:visibility="invisible"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="#636161"
+                android:textIsSelectable="true"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/body_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="Write your note"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="#636161"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_image"
+
+
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/canvas_image_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                tools:listitem="@layout/canvas_image_item"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

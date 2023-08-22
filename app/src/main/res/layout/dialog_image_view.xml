@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dialog_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:id="@+id/prev_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/backword_ic"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/forward_ic"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageButton
+        android:id="@+id/dele_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/del"
+        android:padding="10dp" />
+
+</RelativeLayout>
